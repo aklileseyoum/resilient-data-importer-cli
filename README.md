@@ -2,6 +2,8 @@
 
 A command-line tool that imports user data from a CSV file into a JSON file (the simulated database). It handles missing files, malformed rows and duplicate users without crashing, and logs what it does.
 
+**Demo video:** [Watch on Loom](https://www.loom.com/share/1b8cb4e0a1c54290851abf189844fae7)
+
 ## Requirements
 
 - Python 3.11 or newer
