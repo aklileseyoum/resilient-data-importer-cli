@@ -16,13 +16,15 @@ def parse_user_id(user_id: str | None) -> int | None:
     Raises:
         InvalidTypeError: If the value is not a positive whole number.
     """
-    if user_id is None or user_id == "":
+    if user_id == "" or user_id is None:
         return None
+    # if user_id is None:
+    #     raise InvalidTypeError("The user id is not a number.")
     try:
         user_id = user_id.strip().replace(" ", "")
         value = int(user_id)
         if value <= 0:
-            return None
+            raise InvalidTypeError("The user id is not a number.")
     except ValueError:
         raise InvalidTypeError("The user id is not a number.")
 
@@ -42,7 +44,7 @@ def validate_row(row: dict[str, str]) -> User:
         InvalidTypeError: If user_id is not a positive whole number, or if
             name or email is missing from the row.
     """
-    user_id = parse_user_id(str(row["user_id"]))
+    user_id = parse_user_id(row.get("user_id"))
     name = row["name"]
     email = row["email"]
     if name is None or email is None:

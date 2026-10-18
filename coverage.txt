@@ -1,0 +1,31 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.14.8, pytest-9.1.1, pluggy-1.7.0
+rootdir: C:\Users\Aklile AmaliTech\Desktop\AmaliTech\Backend\Python_Clean_code_testing_and_git\Lab1\resilient-data-importer-cli
+configfile: pyproject.toml
+plugins: platformdirs-4.13.0, cov-7.1.0, mock-3.16.0
+collected 27 items
+
+tests\test_cli.py ..                                                     [  7%]
+tests\test_importer.py .....                                             [ 25%]
+tests\test_main.py .                                                     [ 29%]
+tests\test_reader.py ......                                              [ 51%]
+tests\test_storage.py ...                                                [ 62%]
+tests\test_validator.py ..........                                       [100%]
+
+=============================== tests coverage ================================
+_______________ coverage: platform win32, python 3.14.8-final-0 _______________
+
+Name                                            Stmts   Miss  Cover   Missing
+-----------------------------------------------------------------------------
+src\resilient_data_importer_cli\__init__.py         0      0   100%
+src\resilient_data_importer_cli\cli.py             24      0   100%
+src\resilient_data_importer_cli\exceptions.py       9      0   100%
+src\resilient_data_importer_cli\importer.py        27      0   100%
+src\resilient_data_importer_cli\main.py            20      1    95%   37
+src\resilient_data_importer_cli\models.py           5      0   100%
+src\resilient_data_importer_cli\reader.py          25      0   100%
+src\resilient_data_importer_cli\storage.py         26      0   100%
+src\resilient_data_importer_cli\validator.py       24      1    96%   51
+-----------------------------------------------------------------------------
+TOTAL                                             160      2    99%
+============================= 27 passed in 0.27s ==============================
